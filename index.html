@@ -3,61 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinária | Portfolio</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Portfólio Profissional | Medicina Veterinária</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">VET.<span>LIFE</span></div>
+    <nav class="navbar">
+        <div class="logo">Vet<span>Life</span></div>
         <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#filosofia">Filosofia</a></li>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#servicos">Serviços</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Cuidar vai além da <br><span>medicina clínica.</span></h1>
-            <p>Dedicando amor e ciência à vida de quem não sabe falar, mas sente tudo.</p>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Cuidado e Dedicação aos <span>Animais</span></h1>
+            <p>Transformando a saúde animal através de um atendimento humanizado e técnico.</p>
+            <a href="#contato" class="btn">Agendar Consulta</a>
         </div>
-        <div class="hero-image" data-aos="zoom-in" data-aos-delay="200">
-            <img src="https://images.unsplash.com/photo-1628158230181-29471f54714e?q=80&w=2070" alt="Veterinária">
+    </header>
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&q=80&w=600" alt="Veterinária">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre a Trajetória</h2>
+                    <p>Com foco na excelência e no bem-estar animal, busco oferecer o que há de mais moderno na medicina veterinária, sempre com um olhar atento e carinhoso para cada paciente.</p>
+                    <div class="stats">
+                        <div class="stat-item"><strong>+5</strong> Anos de Experiência</div>
+                        <div class="stat-item"><strong>1k+</strong> Pets Atendidos</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="filosofia" class="values">
-        <h2 data-aos="fade-right">Pilares do meu Trabalho</h2>
-        <div class="grid-values">
-            <div class="card" data-aos="flip-left">
+    <section id="servicos" class="services">
+        <h2>Áreas de Atuação</h2>
+        <div class="service-cards">
+            <div class="card">
                 <div class="icon">🐾</div>
-                <h3>Bem-estar Animal</h3>
-                <p>Abordagem baseada no medo zero e conforto extremo.</p>
+                <h3>Clínica Geral</h3>
+                <p>Check-ups preventivos e diagnósticos precisos para garantir a longevidade.</p>
             </div>
-            <div class="card" data-aos="flip-left" data-aos-delay="100">
-                <div class="icon">🔬</div>
-                <h3>Precisão Técnica</h3>
-                <p>Atualização constante em métodos diagnósticos modernos.</p>
+            <div class="card">
+                <div class="icon">💉</div>
+                <h3>Vacinação</h3>
+                <p>Protocolos vacinais personalizados de acordo com o estilo de vida do pet.</p>
             </div>
-            <div class="card" data-aos="flip-left" data-aos-delay="200">
-                <div class="icon">💛</div>
-                <h3>Empatia Familiar</h3>
-                <p>Suporte humanizado para os tutores durante todo o processo.</p>
+            <div class="card">
+                <div class="icon">🩺</div>
+                <h3>Consultoria</h3>
+                <p>Orientações sobre manejo, nutrição e cuidados básicos diários.</p>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="contact" data-aos="fade-up">
-        <h2>Vamos conversar?</h2>
-        <p>Disponível para consultorias e parcerias em clínicas de alta performance.</p>
-        <a href="#" class="btn-yellow">Entrar em Contato</a>
-    </section>
+    <footer id="contato">
+        <p>&copy; 2026 Veterinária Profissional. Todos os direitos reservados.</p>
+    </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({ duration: 1000, once: true });
+        // Animação suave ao rolar a página
+        ScrollReveal().reveal('.hero-content, .about-img, .about-text, .card', {
+            duration: 1000,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 200
+        });
     </script>
 </body>
 </html>
